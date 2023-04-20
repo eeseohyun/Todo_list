@@ -1,0 +1,33 @@
+.container {
+	display: flex;
+}
+
+.form {
+	display: flex;
+	flex: 1;
+	font-size: 20px;
+	padding: 12px;
+}
+
+.input {
+	flex: 1;
+	font-size: 15px;
+	padding: 12px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.input,
+.enter {
+	border: 2px solid lightgray;
+}
+.enter {
+	font-size: 20px;
+	padding: 8px 10px;
+	background-color: inherit;
+	border-left: 0;
+	font-weight: bold;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: gray;
+	cursor: pointer;
+}
