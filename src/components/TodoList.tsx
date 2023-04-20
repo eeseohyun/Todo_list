@@ -1,16 +1,21 @@
 import styles from "./TodoList.module.css";
 import Todo from "./Todo";
+import { TodoType } from "../App";
 
-const TodoList = () => {
-	const list = ["React", "TypeScript", "JavaScript", "HTML", "CSS"];
+interface TodoListProps {
+	todos: TodoType[];
+}
+const TodoList = (props: TodoListProps) => {
 	return (
-		<section>
-			<ol className={styles.olContainer}>
-				{list.map((el, idx) => (
-					<Todo key={`${el}_${idx}`} todo={el} />
-				))}
-			</ol>
-		</section>
+		<>
+			<section>
+				<ol className={styles.olContainer}>
+					{props.todos.map((todo) => (
+						<Todo key={todo.id} todo={todo.todo} isChecked={todo.isChecked} />
+					))}
+				</ol>
+			</section>
+		</>
 	);
 };
 
